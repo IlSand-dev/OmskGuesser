@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button start;
     Button exit;
+    Button instructionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         start = (Button) findViewById(R.id.start);
         exit = (Button) findViewById(R.id.exit);
+        instructionButton = (Button) findViewById(R.id.instructionButton);
         start.setOnClickListener(this);
         exit.setOnClickListener(this);
+        instructionButton.setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.exit:
                 finishAndRemoveTask();
+                break;
+//            case R.id.instructionButton:
+//                Intent intent1 = new Intent(this, InstructionActivity.class);
+//                startActivity(intent1);
+//                break;
             default:
                 break;
         }
