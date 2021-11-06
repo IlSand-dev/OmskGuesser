@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
+
   <LinearLayout
       android:id="@+id/mainlayout"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical"
       android:background="@drawable/background"
-      tools:context=".MainActivity"
-      >
+      android:orientation="vertical"
+      tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/sightImage"
@@ -21,6 +21,7 @@
         android:layout_height="246dp"
         android:padding="10dp"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+
   </LinearLayout>
 
   <TextView
@@ -39,6 +40,34 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.396" />
+
+  <Button
+      android:id="@+id/againButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="6dp"
+      android:text="Ещё раз"
+      android:textSize="14sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.755"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.976" />
+
+  <Button
+      android:id="@+id/menuButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="6dp"
+      android:text="В меню"
+      android:textSize="14sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.244"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.976" />
 
   <TextView
       android:id="@+id/difference"
@@ -69,21 +98,6 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.655" />
-
-  <Button
-      android:id="@+id/returnButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Return"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:padding="6dp"
-      app:layout_constraintVertical_bias="0.929"
-      android:textSize="14sp"
-      />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

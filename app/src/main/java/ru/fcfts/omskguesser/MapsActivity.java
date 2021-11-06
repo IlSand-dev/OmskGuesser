@@ -15,6 +15,8 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -101,7 +103,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onClick(View v){
         switch (v.getId()){
             case R.id.check:
-                mMap.addMarker(new MarkerOptions().position(sightLatLng));
+                mMap.addMarker(new MarkerOptions().position(sightLatLng).title(sight.getName())
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
                 Polyline polyline1 = mMap.addPolyline(new PolylineOptions()
                         .add(sightLatLng, myLatLng));
                 mMap.setOnMapClickListener(null);

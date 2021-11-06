@@ -17,6 +17,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     TextView difference;
     TextView sightFact;
     Button returnButton;
+    Button againButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         sightName = (TextView) findViewById(R.id.sightName);
         difference = (TextView) findViewById(R.id.difference);
         sightFact = (TextView) findViewById(R.id.sightFact);
-        returnButton = (Button) findViewById(R.id.returnButton);
+        againButton = (Button) findViewById(R.id.againButton);
+        returnButton = (Button) findViewById(R.id.menuButton);
 
         Resources res = getResources();
 
@@ -50,15 +53,20 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         difference.setText(stringDist);
         sightFact.setText(sight.getFact());
 
+        againButton.setOnClickListener(this);
         returnButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
         switch (v.getId()){
-            case R.id.returnButton:
+            case R.id.againButton:
                 Intent intent = new Intent(this, SightActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.menuButton:
+                Intent intent2 = new Intent(this, MainActivity.class);
+                startActivity(intent2);
                 break;
             default:
                 break;

@@ -14,9 +14,7 @@
         android:orientation="vertical"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-107dp">
-
-    </LinearLayout>
+        tools:layout_editor_absoluteY="-107dp"/>
 
     <TextView
         android:id="@+id/GameName"
